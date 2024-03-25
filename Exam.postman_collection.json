@@ -1,0 +1,1089 @@
+{
+	"info": {
+		"_postman_id": "49cf0690-1080-48f3-b593-273f7c99e524",
+		"name": "Exam",
+		"description": "social media app\n\nuser posts comment Replay comment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27827120"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"heba attia\",\r\n    \"email\":\"hebasabrysalih@gmail.com\",\r\n    \"password\":\"hfhASDFtfthfth12166\",\r\n    \"phone\":\"01110231878\",\r\n    \"age\":28\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signUp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmEmail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"hebasabrysalih@gmail.com\",\r\n   \"code\":\"k1615X\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/confirmEmail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"confirmEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"email\":\"hebasabrysalih@gmail.com\",\r\n    \"password\":\"hfhASDFtfthfth12166\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signIn",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\":50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add profile picture",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/programing/portfolio website using HTML , CSS/images/Designer _Two Color.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add cover pictures",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coverImages",
+									"type": "file",
+									"src": [
+										"/E:/programing/portfolio website using HTML , CSS/images/project 04.jpg",
+										"/E:/programing/portfolio website using HTML , CSS/images/project 05.jpg",
+										"/E:/programing/portfolio website using HTML , CSS/images/project 06.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/coverImages",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"coverImages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add video for post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/E:/video.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/video",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"hfhASDFtfthfth12166\",\r\n     \"newPassword\":\"jdhs45AQSSIJ963q\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/updatePass",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"updatePass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDelete",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVhMWZiZGE3YTE2YjkxZDllZmE0YSIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk1OTQ3MTE4fQ.3kNTWntHNExsZFyE1vo9w5KPSPGWh5R_QJBmYUHwYdU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/softDelete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"softDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password 1-(sendCode)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\":\"hebasabrysalih@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/sendCode",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"sendCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password 2-(resetPass)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0.eyJpZCI6IjY1MTVhMWZiZGE3YTE2YjkxZDllZmE0YSIsImVtYWlsIjoiaGViYXNvbGltYW40NjQ4QGdtYWlsLmNvbSIsImlhdCI6MTY5NTk0NTE3Mn0.ecc1psWDGMR55A7y9QqUAjPIQsBgOMAUn5taFptGG4c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"hebasabrysalih@gmail.com\",\r\n        \"password\":\"jdhs45AQSSIJ963q54545\",\r\n        \"code\":\"Iq-6Nr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/resetPass",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"resetPass"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**to send user data**\n\n(signUp /confirmEmail/signIn /get user profile (posts . comments . Replay)/ update and soft delete / add profile image cover and video for post / two step when forget password)"
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "add post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "this is post 3333",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/55495069_2601240750122335_4051222262659940352_n.jpg"
+								},
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/post/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"post 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/post/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/651bafc86f784536f3ba6aa9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"651bafc86f784536f3ba6aa9"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all posts with their comments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/?size=2&page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								""
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get post by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/like/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"like",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/unlike/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"unlike",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update privacy",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"privacy\":\"onlyMe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/post/changPrivacy/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"changPrivacy",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get posts created yesterday",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/post/postsYes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"postsYes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get posts created today",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/post/postsTo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"postsTo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**to add posts data**\n\n(add post / update and delete post / add like or unlike for post / chang privacy / get post by id / get posts created today and yesterday)"
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "Add comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\":\"nice\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\":\"وحش جدا\",\r\n    \"postId\":\"651b3de43ae74227da8f99a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment/651b4a859e1eed82a7765f9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"651b4a859e1eed82a7765f9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTgwOTQ4NjA4MmNiMzU0M2E3OTViYyIsImVtYWlsIjoiYWhtZWQxMjNAZ21haWwuY29tIiwiaWF0IjoxNjk2MDc1ODg5fQ.Xdtck8BpRx2E1nEeWfg7MwV1T2-_mEsBzXYyR4aHS04",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\":\"651b3de43ae74227da8f99a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment/651b4a859e1eed82a7765f9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"651b4a859e1eed82a7765f9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"postId\":\"651b3de43ae74227da8f99a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment/like/651b4a859e1eed82a7765f9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"like",
+								"651b4a859e1eed82a7765f9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"postId\":\"651b3de43ae74227da8f99a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment/unlike/651b4a859e1eed82a7765f9b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"unlike",
+								"651b4a859e1eed82a7765f9b"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**add comment on posts**\n\n(add . update and delete comment / like or unlike for post )"
+		},
+		{
+			"name": "commentReplay",
+			"item": [
+				{
+					"name": "replay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"replyBody\":\"لا مش جميل\",\r\n     \"commentId\": \"651b4a859e1eed82a7765f9b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/commentReplay/651b3de43ae74227da8f99a7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"commentReplay",
+								"651b3de43ae74227da8f99a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Replay",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"replyBody\":\"لا جميل جدا \",\r\n    \"postId\":\"651b3de43ae74227da8f99a7\",\r\n    \"commentId\":\"651b4a859e1eed82a7765f9b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/commentReplay/651b4bf89e1eed82a7765fb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"commentReplay",
+								"651b4bf89e1eed82a7765fb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Replay",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"postId\":\"651b3de43ae74227da8f99a7\",\r\n    \"commentId\":\"651b4a859e1eed82a7765f9b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/commentReplay/651b4bf89e1eed82a7765fb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"commentReplay",
+								"651b4bf89e1eed82a7765fb0"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like replay",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentId\":\"651b4a859e1eed82a7765f9b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/commentReplay/like/651b4bf89e1eed82a7765fb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"commentReplay",
+								"like",
+								"651b4bf89e1eed82a7765fb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike replay",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Heba__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTlkMDhkNmUwOWViYzYwNWM1NzM1NCIsImVtYWlsIjoiaGViYXNhYnJ5c2FsaWhAZ21haWwuY29tIiwiaWF0IjoxNjk2MTkxMzAzLCJleHAiOjE3MjI0NzEzMDN9.e-G-LSdikxX_FPM2G5Ke_BVY0auxHqv41yavuKZ-nU0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentId\":\"651b4a859e1eed82a7765f9b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/commentReplay/unlike/651b4bf89e1eed82a7765fb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"commentReplay",
+								"unlike",
+								"651b4bf89e1eed82a7765fb0"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**add Replaycomment on posts**\n\n(add . update and delete Replaycomment / like or unlike for post )"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
